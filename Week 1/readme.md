@@ -1,6 +1,3 @@
-Perfect! Here's a polished, **world-class README.md** for your Week 1 of MLZoomCamp, ready for GitHub:
-
-````markdown
 # Machine Learning Zoomcamp – Week 1: Linear Algebra Foundations
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)
