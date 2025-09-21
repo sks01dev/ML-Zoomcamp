@@ -81,5 +81,3 @@ print("Sum of weights:", total_weight)
 * [Jupyter Notebooks](https://jupyter.org/) – Interactive coding environment
 
 ```
-o you want me to do that next?
-```
