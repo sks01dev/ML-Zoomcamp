@@ -184,4 +184,3 @@ This project is for educational purposes for **ML Zoomcamp 2025**.
 * [Docker Documentation](https://docs.docker.com/)
 * [Scikit-Learn Pipeline](https://scikit-learn.org/stable/modules/compose.html)
 
-```
