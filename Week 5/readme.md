@@ -2,6 +2,9 @@
 # Customer Conversion Prediction API
 
 [![Python](https://img.shields.io/badge/python-3.12%2F3.13-blue)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100-green)](https://fastapi.tiangolo.com/)
+[![Docker](https://img.shields.io/badge/docker-ready-blue?logo=docker)](https://www.docker.com/)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 This project demonstrates **deploying a machine learning model with FastAPI and Docker**.  
 The model predicts the probability of a lead converting to a customer based on simple features.
