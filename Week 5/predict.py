@@ -19,13 +19,15 @@ class Customer(BaseModel):
         "json_schema_extra": {
             "examples": [
                 {
+                    # This dictionary below is the sample that will appear in the Swagger UI
                     "lead_source": "paid_ads",
-                    "annual_income": 79276.0,
+                    "annual_income": 79276.0, # Note: Use a float (79276.0) for consistency
                     "number_of_courses_viewed": 2,
                 }
             ]
         }
     }
+    
 
 # response data
 class PredictResponse(BaseModel):
@@ -40,15 +42,14 @@ with open("model.bin", "rb") as f_in:
 
 # Helper function to get prediction from the loaded model
 def predict_single(customer_dict: dict) -> float:
-    return pipeline.predict_proba(customer_dict)[0, 1]
+    return pipeline.predict_proba([customer_dict])[0, 1]
 
 # Define the prediction endpoint
 @app.post("/predict", response_model=PredictResponse)
 def predict(customer: Customer):
-    prob = predict_single(customer)
+    prob = predict_single(customer.model_dump())
     return PredictResponse(convert_probability=prob, converted=(prob >= 0.5))
 
 # Run the app for local development
-# The '__main__' block is for local development and will NOT run on Hugging Face Spaces
-# if __name__ == "__main__":
-#     uvicorn.run("predict:app", host="0.0.0.0", port=9696)
+if __name__ == "__main__":
+    uvicorn.run("predict:app", host="0.0.0.0", port=9696)
