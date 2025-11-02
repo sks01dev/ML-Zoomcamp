@@ -28,11 +28,9 @@ The notebook demonstrates the process of preparing data, training models, tuning
 
 ### 3. Random Forest Regressor
 - Trained a **Random Forest** with parameters:
-  ```python
   n_estimators=10
   random_state=1
   n_jobs=-1
-````
 
 * Calculated **RMSE** on the validation dataset (baseline result ≈ `0.46`).
 
