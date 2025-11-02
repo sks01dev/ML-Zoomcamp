@@ -97,7 +97,7 @@ The notebook demonstrates the process of preparing data, training models, tuning
 
 ---
 
-## 👤 Author
+## Created By:
 
 **Shivam Swarnkar**
 [GitHub](https://github.com/sks01dev) | [Email](sswarnkar0001@gmail.com)
