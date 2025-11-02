@@ -91,7 +91,7 @@ The notebook demonstrates the process of preparing data, training models, tuning
 ## 🔮 Possible Improvements
 
 * Add cross-validation and hyperparameter tuning (`GridSearchCV`)
-* Extend to Gradient Boosting, LightGBM, or XGBoost
+* Extend to LightGBM
 * Analyze model interpretability with SHAP values
 * Deploy as a simple web API or dashboard
 
