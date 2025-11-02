@@ -101,7 +101,3 @@ The notebook demonstrates the process of preparing data, training models, tuning
 
 **Shivam Swarnkar**
 [GitHub](https://github.com/sks01dev) | [Email](sswarnkar0001@gmail.com)
-
-
-Would you like me to insert your actual name and GitHub link into this markdown before saving it as a ready-to-upload `README.md` file?
-```
