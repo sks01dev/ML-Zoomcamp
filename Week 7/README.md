@@ -72,3 +72,5 @@ With a JSON body like:
   "wifi": 1
 }
 ```
+
+### Kaggle Dataset used: https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification
