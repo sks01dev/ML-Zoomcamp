@@ -72,6 +72,3 @@ With a JSON body like:
   "wifi": 1
 }
 ```
-
-
-If you want, I can also create a **README with badges, screenshots, and example responses**.
