@@ -125,7 +125,7 @@ midterm_deployment_mobile/
 
 Your live API will appear at:
 
-**[https://\<your-render-app\>[.onrender.com/docs](https://www.google.com/search?q=https://.onrender.com/docs)](https://ml-zoomcamp.onrender.com/docs)**
+**[(https://www.google.com/search?q=https://.onrender.com/docs)](https://ml-zoomcamp.onrender.com/docs)**
 
 -----
 
