@@ -1,4 +1,4 @@
-
+# Midterm Project
 # 📱 Mobile Price Prediction API
 
 This API predicts the **price range** of a mobile phone (0 = low, 3 = very high).
