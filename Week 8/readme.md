@@ -78,7 +78,7 @@ Validation set remained unchanged.
 → **0.88**
 
 **Question 6:** Average test accuracy for the last 5 augmented epochs  
-→ **0.68**
+→ **0.98 (the higher value)**
 
 ---
 
