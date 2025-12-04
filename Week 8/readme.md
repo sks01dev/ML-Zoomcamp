@@ -5,7 +5,7 @@ The dataset is provided in the homework and contains separate folders for traini
 
 ---
 
-## 🎯 Homework Goals
+## Homework Goals
 
 - Load and prepare the image dataset  
 - Build a simple CNN model  
@@ -13,11 +13,9 @@ The dataset is provided in the homework and contains separate folders for traini
 - Add data augmentation and train 10 more epochs  
 - Compute accuracy and loss values for the homework quiz  
 
-All steps were followed exactly as instructed.
-
 ---
 
-## 🔧 Model Summary
+## Model Summary
 
 The CNN architecture includes:
 
@@ -35,7 +33,7 @@ All images were resized to **200×200**, converted to tensors, and normalized.
 
 ---
 
-## 🎛 Training Details
+## Training Details
 
 ### **First 10 epochs (no augmentation)**  
 Transformations:
@@ -84,7 +82,7 @@ Validation set remained unchanged.
 
 ---
 
-## 📎 Notebook Link
+## Notebook Link
 
 GitHub Notebook:  
 https://github.com/sks01dev/ML-Zoomcamp/blob/main/Week%208/Hairstyle_Classification.ipynb
@@ -94,7 +92,7 @@ https://github.com/DataTalksClub/machine-learning-zoomcamp/blob/master/cohorts/2
 
 ---
 
-## 📌 Summary
+## Summary
 
 This homework covered the full workflow of training a CNN from scratch:
 
