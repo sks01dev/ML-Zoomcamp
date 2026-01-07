@@ -262,11 +262,5 @@ Render automatically builds and runs the Docker container.
 
 Capstone project for **ML Zoomcamp**
 Built following real-world machine learning engineering practices.
-
+With ❤
 ---
-
-If you want, next I can:
-
-* Review this README against the **official Zoomcamp rubric**
-* Shorten it for submission version
-* Help you write a **2-minute oral explanation** for viva/interview
