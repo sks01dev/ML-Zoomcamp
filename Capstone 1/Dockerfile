@@ -18,7 +18,7 @@ COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen --no-cache
 
 # 6. Copy your application files (predict.py and model.bin)
-COPY predict.py model.bin ./
+COPY predict.py model.bin feature_columns.bin ./
 
 # 7. Expose the default Render port
 EXPOSE 10000
