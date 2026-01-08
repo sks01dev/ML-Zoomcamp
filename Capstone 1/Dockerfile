@@ -1,27 +1,28 @@
-FROM python:3.12.1-slim-bookworm
+# Use the official Python image
+FROM python:3.12-slim-bookworm
 
-# Install uv by copying it directly from its container image (much faster and smaller than pip)
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
+# 1. Install uv binary directly
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
-# Install uv (the fast package manager)
-RUN pip install uv
-
-# Set the working directory
+# 2. Set the working directory
 WORKDIR /app
 
-# Add the virtual environment’s bin directory to PATH so Python tools work globally
+# 3. CRITICAL: Add the virtual environment to the system PATH
+# This allows the container to find 'uvicorn' automatically
+ENV PATH="/app/.venv/bin:$PATH"
 
-# Copy dependency files
+# 4. Copy dependency files first
 COPY pyproject.toml uv.lock ./
 
-# Install dependencies from the lock file
+# 5. Install dependencies into /app/.venv
 RUN uv sync --frozen --no-cache
 
-# Copy the FastAPI app and model
+# 6. Copy your application files (predict.py and model.bin)
 COPY predict.py model.bin ./
 
-# Expose port (optional but good practice)
-EXPOSE 9696
+# 7. Expose the default Render port
+EXPOSE 10000
 
-# Start the FastAPI app with uvicorn
-ENTRYPOINT ["uvicorn", "predict:app", "--host", "0.0.0.0", "--port", "9696"]
+# 8. Start command using uvicorn
+# We use port 10000 to match Render's default expectations
+CMD ["uvicorn", "predict:app", "--host", "0.0.0.0", "--port", "10000"]
