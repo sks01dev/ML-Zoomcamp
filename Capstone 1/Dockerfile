@@ -1,27 +1,27 @@
-# Use the base Python image
-FROM python:3.11-slim
+FROM python:3.12.1-slim-bookworm
 
-# CRITICAL FIXES FOR WSL2/DOCKER DESKTOP
-# Use copy mode instead of hard links to prevent SIGBUS/filesystem errors
-ENV UV_LINK_MODE=copy
-# Ensure uv does not try to use system environment configuration
-ENV UV_PROJECT_ENVIRONMENT=""
+# Install uv by copying it directly from its container image (much faster and smaller than pip)
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
+# Install uv (the fast package manager)
+RUN pip install uv
+
+# Set the working directory
 WORKDIR /app
 
-# Install uv using pip install is necessary for this specific workflow
-RUN pip install --no-cache-dir uv
+# Add the virtual environment’s bin directory to PATH so Python tools work globally
 
-# Copy dependency definitions only
+# Copy dependency files
 COPY pyproject.toml uv.lock ./
 
-# Install locked dependencies into the default virtual environment in /app
-# Note: --locked is correct here to ensure exact version matching
-RUN uv sync --locked
+# Install dependencies from the lock file
+RUN uv sync --frozen --no-cache
 
-# Copy ONLY required runtime files
-COPY predict.py model.bin feature_columns.bin ./
+# Copy the FastAPI app and model
+COPY predict.py model.bin ./
 
-EXPOSE 8000
+# Expose port (optional but good practice)
+EXPOSE 9696
 
-CMD ["uvicorn", "predict:app", "--host", "0.0.0.0", "--port", "8000"]
+# Start the FastAPI app with uvicorn
+ENTRYPOINT ["uvicorn", "predict:app", "--host", "0.0.0.0", "--port", "9696"]
