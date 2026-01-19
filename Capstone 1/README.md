@@ -251,14 +251,6 @@ Render automatically builds and runs the Docker container.
 
 ---
 
-## Notes
-
-* This project intentionally avoids over-engineering
-* No deep learning or unnecessary MLOps tooling
-* Focused on correctness, clarity, and production readiness
-* Fully aligned with **ML Zoomcamp capstone evaluation criteria**
-
----
 
 ## Author
 
@@ -266,5 +258,6 @@ Capstone project for **ML Zoomcamp**
 Built following real-world machine learning engineering practices.
 With ❤
 ---
+
 
 
