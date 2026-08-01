@@ -1,6 +1,4 @@
-# Midterm Project
----
-# 📱 Mobile Price Prediction API
+# Device Tier Analytics & Valuation API
 
 Try out here: https://ml-zoomcamp.onrender.com/docs
 
