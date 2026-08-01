@@ -10,7 +10,7 @@ model.load_model("mobile.json")
 
 # Initialize FastAPI App
 app = FastAPI(
-    title="Mobile Price Classification API",
+    title="Device Tier Analytics & Valuation API",
     description="Predicts price range of a mobile phone (0 = low cost → 3 = very high cost).",
     version="1.0"
 )
